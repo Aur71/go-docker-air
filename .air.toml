@@ -1,0 +1,22 @@
+# Config file for Air
+[build]
+    # Build command
+    cmd = "go build -o tmp/main main.go"
+
+    # Binary Air should run
+    bin = "tmp/main"
+
+    # Project root
+    dir = "."
+
+    # Watch Go files
+    include_ext = ["go"]
+
+    # Ignore vendor and tmp (to prevent rebuild loops)
+    exclude_dir = ["vendor", "tmp"]
+
+    # Use polling (needed for Docker volumes on some OSes)
+    poll = true
+
+[log]
+    level = "debug"
