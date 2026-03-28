@@ -14,4 +14,14 @@ The development environment uses Air to watch for file changes and restart the G
 
 Run the following command to start the hot-reloading development server:
 
-`docker run -p 3000:3000 --rm -v ${PWD}:/app -v /app/tmp --name go-docker-air-container go-docker-air:dev`
+```
+docker compose up --build
+```
+
+## Testing Production Locally
+
+To build and run the production image locally:
+
+```
+docker compose -f docker-compose.prod.yml up --build
+```
